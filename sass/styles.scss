@@ -1,3 +1,10 @@
-html,body {
-    background-color: aquamarine;
-}
+// Import style defaults
+@import "./defaults/normalize";
+// @import "./defaults/skeleton";
+@import "./defaults/variables";
+@import "./defaults/mixins";
+@import "./defaults/default";
+
+// Import styles
+@import "./components/header";
+@import "./components/footer";

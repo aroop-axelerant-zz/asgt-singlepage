@@ -1,0 +1,24 @@
+// Media Queries
+@mixin phone {
+    @media only screen and (max-width: 479px) {
+        @content;
+    }
+}
+
+@mixin phablet {
+    @media only screen and (min-width: 480px) and (max-width: 767px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media only screen and (min-width: 768px) and (max-width: 1199px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media only screen and (min-width: 1200px) {
+        @content;
+    }
+}
