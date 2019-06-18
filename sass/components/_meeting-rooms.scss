@@ -1,0 +1,26 @@
+.meeting-rooms {
+    .room {
+        display: flex;
+        flex-direction: row-reverse;
+        @include phone {
+            display: block;
+        }
+        > div:first-child {
+            width: 40%;
+            @include phone {
+                width: 100%;
+            }
+        }
+        > div:last-child {
+            width: 60%;
+            padding-right: 40px;
+            @include phone {
+                width: 100%;
+            }
+        }
+        
+        img {
+            width: 100%;
+        }
+    }
+}

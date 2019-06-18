@@ -3,3 +3,9 @@ $brand-color: #EC0000;
 $text-black: #000000;
 $text-white: #ffffff;
 $text-grey: #757575;
+
+
+//Typography
+$baseFontSize: 16px;
+$smallFont: $baseFontSize - 2;
+$bigFont: $baseFontSize * 1.25;

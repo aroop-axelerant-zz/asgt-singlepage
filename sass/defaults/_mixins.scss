@@ -1,3 +1,11 @@
+// Typography
+@mixin primaryFont {
+    font-family: 'Playfair Display', serif;
+}
+@mixin secondaryFont {
+    font-family: 'Roboto', Helvetica, sans-serif;
+}
+
 // Media Queries
 @mixin phone {
     @media only screen and (max-width: 479px) {
@@ -13,6 +21,11 @@
 
 @mixin tablet {
     @media only screen and (min-width: 768px) and (max-width: 1199px) {
+        @content;
+    }
+}
+@mixin less-than-tablet {
+    @media only screen and (max-width: 1199px) {
         @content;
     }
 }

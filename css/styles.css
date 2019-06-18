@@ -359,6 +359,9 @@ th {
 html, body {
   background-color: #000000;
   color: #ffffff;
+  font-family: 'Roboto', Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
   margin: 0;
   padding: 0; }
 
@@ -372,81 +375,185 @@ html, body {
     .container {
       min-width: 320px; } }
 
-.three-column {
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  line-height: 1.75em;
+  margin: 0 0 30px 0; }
+
+h1 {
+  font-size: 32px; }
+
+h2 {
+  font-size: 28px; }
+
+h3 {
+  font-size: 20px; }
+
+h4 {
+  font-family: 'Roboto', Helvetica, sans-serif;
+  color: #EC0000;
+  margin: 0;
+  margin-bottom: 20px;
+  text-transform: uppercase; }
+
+p {
+  font-size: 16px;
+  line-height: 1.5em; }
+
+a {
+  font-weight: 400; }
+
+.three-column-cards {
   display: flex; }
-  .three-column .column {
+  .three-column-cards .column {
     margin-left: 2%;
     width: 31.6666666667%; }
-    .three-column .column:first-child {
+    .three-column-cards .column:first-child {
       margin-left: 0; }
     @media only screen and (max-width: 479px) {
-      .three-column .column {
+      .three-column-cards .column {
         width: 100%;
         margin: 0 0 20px 0; } }
   @media only screen and (max-width: 479px) {
-    .three-column {
+    .three-column-cards {
       flex-wrap: wrap; } }
 
-.page-header {
+.two-column {
   display: flex;
+  flex-wrap: wrap; }
+  .two-column .column {
+    box-sizing: border-box;
+    margin: 0;
+    width: 50%; }
+    @media only screen and (max-width: 479px) {
+      .two-column .column {
+        width: 100%; } }
+    .two-column .column p {
+      line-height: 2em; }
+
+.two-column-30-70 {
+  display: flex; }
+  @media only screen and (max-width: 479px) {
+    .two-column-30-70 {
+      display: block; } }
+  .two-column-30-70 .column {
+    box-sizing: border-box; }
+    .two-column-30-70 .column:first-child {
+      width: 30%;
+      padding-right: 120px; }
+      @media only screen and (max-width: 479px) {
+        .two-column-30-70 .column:first-child {
+          width: 100%;
+          padding-right: 40px; } }
+    .two-column-30-70 .column:last-child {
+      width: 70%; }
+      @media only screen and (max-width: 479px) {
+        .two-column-30-70 .column:last-child {
+          width: 100%; } }
+
+.primary-cta {
+  width: fit-content;
+  position: relative;
+  overflow: hidden; }
+  .primary-cta a {
+    color: #ffffff;
+    display: block;
+    background-color: #EC0000;
+    border-radius: 25px;
+    padding: 15px 25px;
+    transition: all 0.3s;
+    text-decoration: none;
+    width: fit-content;
+    position: relative;
+    overflow: hidden; }
+    .primary-cta a:hover {
+      background-color: #ff3a3a; }
+    .primary-cta a:before {
+      content: '';
+      background-color: #ffffff;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 10px;
+      position: absolute;
+      transform: translateX(-100%) rotate(45deg);
+      transition: all 0.3s; }
+    .primary-cta a:hover:before {
+      transform: translateX(100%) rotate(45deg); }
+
+.page-header {
   align-items: center;
+  box-sizing: border-box;
+  display: flex;
   padding: 20px;
   justify-content: space-between;
   position: fixed;
   width: 100%;
-  z-index: 9999; }
+  z-index: 9999;
+  transition: background 0.3s; }
+  @media only screen and (max-width: 1199px) {
+    .page-header {
+      display: block; } }
+  .page-header .logo img {
+    max-height: 80px; }
   .page-header .navigation {
     display: flex;
     align-items: center;
     transform: translateX(-100%);
     transition: all 0.3s; }
+    @media only screen and (max-width: 1199px) {
+      .page-header .navigation {
+        display: none;
+        transform: none;
+        transition: none; } }
     .page-header .navigation .main-navigation ul {
       list-style: none;
       padding: 0; }
       .page-header .navigation .main-navigation ul li {
         display: inline-block; }
+        @media only screen and (max-width: 1199px) {
+          .page-header .navigation .main-navigation ul li {
+            display: block; } }
     .page-header .navigation a {
       color: #ffffff;
-      text-decoration: none;
-      padding: 15px; }
+      display: block;
+      padding: 15px;
+      text-decoration: none; }
     .page-header .navigation .primary-cta {
       display: none;
       transition: all 0.3s ease-in-out; }
+      @media only screen and (max-width: 1199px) {
+        .page-header .navigation .primary-cta {
+          display: block; } }
     .page-header .navigation .primary-cta a {
-      display: block;
-      background-color: #EC0000;
-      border-radius: 25px;
       margin-left: 15px;
-      padding-left: 25px;
-      padding-right: 25px;
-      transition: all 0.3s;
       position: relative;
       overflow: hidden; }
-      .page-header .navigation .primary-cta a:hover {
-        background-color: #ff3a3a; }
-      .page-header .navigation .primary-cta a:before {
-        content: '';
-        background-color: #ffffff;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 10px;
-        position: absolute;
-        transform: translateX(-100%) rotate(45deg);
-        transition: all 0.3s; }
-      .page-header .navigation .primary-cta a:hover:before {
-        transform: translateX(100%) rotate(45deg); }
+      @media only screen and (max-width: 1199px) {
+        .page-header .navigation .primary-cta a {
+          margin-left: 0; } }
+  .page-header .ico-menu {
+    display: none; }
+    .page-header .ico-menu:before {
+      content: "";
+      position: absolute;
+      top: 52px;
+      right: 20px;
+      width: 1em;
+      height: 0.125em;
+      border-top: 0.375em double #EC0000;
+      border-bottom: 0.125em solid #EC0000; }
+    @media only screen and (max-width: 1199px) {
+      .page-header .ico-menu {
+        display: block; } }
 
-.page-body {
-  min-height: 500px; }
-
-.page-footer .three-column .column {
+.page-footer .three-column-cards .column {
   background-color: #ffffff;
   color: #000000;
   padding: 10px;
   display: flex;
   align-items: center; }
-  .page-footer .three-column .column p {
+  .page-footer .three-column-cards .column p {
     line-height: 1.5em; }
 
 .page-footer .copyright-text {
@@ -459,3 +566,64 @@ html, body {
       color: #757575; }
   .page-footer .copyright-text img {
     margin-top: 20px; }
+
+.about-workcafe {
+  background: #ffffff;
+  color: #000000; }
+  .about-workcafe .column {
+    display: flex;
+    align-items: center;
+    min-height: 360px; }
+    .about-workcafe .column > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; }
+    .about-workcafe .column .about-text {
+      padding: 40px 80px 40px 40px; }
+      @media only screen and (max-width: 479px) {
+        .about-workcafe .column .about-text {
+          padding-right: 40px; } }
+    .about-workcafe .column:nth-child(3) {
+      background-image: url(../../images/blackboard-texture.jpg);
+      background-position: cover;
+      color: white; }
+    .about-workcafe .column .testimonial {
+      display: flex;
+      align-items: flex-start;
+      padding: 40px 80px 40px 40px; }
+      @media only screen and (max-width: 479px) {
+        .about-workcafe .column .testimonial {
+          display: block;
+          padding-right: 40px; } }
+      .about-workcafe .column .testimonial img {
+        width: 48px;
+        padding-right: 20px; }
+      .about-workcafe .column .testimonial blockquote {
+        margin: 0; }
+      .about-workcafe .column .testimonial p {
+        font-size: 20px;
+        line-height: 1.75em;
+        margin-top: 0; }
+        .about-workcafe .column .testimonial p span {
+          font-size: 14px;
+          font-weight: 500; }
+
+.meeting-rooms .room {
+  display: flex;
+  flex-direction: row-reverse; }
+  @media only screen and (max-width: 479px) {
+    .meeting-rooms .room {
+      display: block; } }
+  .meeting-rooms .room > div:first-child {
+    width: 40%; }
+    @media only screen and (max-width: 479px) {
+      .meeting-rooms .room > div:first-child {
+        width: 100%; } }
+  .meeting-rooms .room > div:last-child {
+    width: 60%;
+    padding-right: 40px; }
+    @media only screen and (max-width: 479px) {
+      .meeting-rooms .room > div:last-child {
+        width: 100%; } }
+  .meeting-rooms .room img {
+    width: 100%; }

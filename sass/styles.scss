@@ -1,6 +1,5 @@
 // Import style defaults
 @import "./defaults/normalize";
-// @import "./defaults/skeleton";
 @import "./defaults/variables";
 @import "./defaults/mixins";
 @import "./defaults/default";
@@ -8,3 +7,5 @@
 // Import styles
 @import "./components/header";
 @import "./components/footer";
+@import "./components/about-cafe";
+@import "./components/meeting-rooms";

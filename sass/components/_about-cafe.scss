@@ -1,0 +1,53 @@
+@import "../defaults/variables";
+@import "../defaults/mixins";
+
+.about-workcafe {
+    background: $text-white;
+    color: $text-black;
+    .column {
+        display: flex;
+        align-items: center;
+        min-height: 360px;
+        > img {
+            width:100%;
+            height:100%;
+            object-fit: cover;
+        }
+        .about-text {
+            padding: 40px 80px 40px 40px;
+            @include phone {
+                padding-right: 40px;
+            }
+        }
+        &:nth-child(3){
+            background-image: url(../../images/blackboard-texture.jpg);
+            background-position: cover;
+            color: white;
+        }
+        .testimonial {
+            display: flex;
+            align-items: flex-start;
+            padding: 40px 80px 40px 40px;
+            @include phone {
+                display: block;
+                padding-right: 40px;
+            }
+            img {
+                width: 48px;
+                padding-right: 20px;
+            }
+            blockquote {
+                margin: 0;
+            }
+            p {
+                font-size: $bigFont;
+                line-height: 1.75em;
+                margin-top: 0;
+                span {
+                    font-size: $smallFont;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}
