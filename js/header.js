@@ -20,4 +20,5 @@ $(window).scroll(function (){
 // Menu Toggle on click
 $('.page-header .ico-menu').click(function (){
     $('.page-header .navigation').slideToggle();
+    $('.page-header').toggleClass("bg-black");
 });

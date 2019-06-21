@@ -1,26 +1,84 @@
 .meeting-rooms {
-    .room {
-        display: flex;
-        flex-direction: row-reverse;
-        @include phone {
+    background: $text-white;
+    color: $text-black;
+    .slides-wrapper {
+        width: $slider-width;
+        height: $slider-height + 60;
+        overflow: hidden;
+        .slides {
+          transform: translateX(0%);
+          transition: all 0.3s;
+          .slide {
             display: block;
-        }
-        > div:first-child {
-            width: 40%;
-            @include phone {
-                width: 100%;
+            width: $slider-width;
+            height: $slider-height;
+            float: left;
+            .slide-content{
+              display: flex;
+              flex-direction: row-reverse;
+              > div {
+                width: 50%;
+              }
+              .room-image {
+                position: relative;
+                img {
+                  width: 100%;
+                  object-fit: cover;
+                  height: 100%;
+                }
+                .slide-counter {
+                  background: linear-gradient(transparent 35%, White 35%);
+                  color: grey;
+                  font-size: 1.5em;
+                  padding: 0 20px;
+                  line-height: 0;
+                  position: absolute;
+                  bottom: 0;
+                  right: 0;
+                  .current-slide {
+                    color: red;
+                    font-size: 4em;
+                  }
+                }
+              }
+              .room-info {
+                padding-right: 20px;
+                .room-details {
+                  list-style: none;
+                  padding: 0;
+                  li {
+                    display: inline-block;
+                    vertical-align: top;
+                    margin-right: 20px;
+                    margin-bottom: 20px;
+                    > img, > span {
+                      display: inline-block;
+                      vertical-align: middle;
+                    }
+                    img { 
+                        opacity: 0.5;
+                        width: 20px; 
+                    }
+                  }
+                }
+              }
             }
+          }
         }
-        > div:last-child {
-            width: 60%;
-            padding-right: 40px;
-            @include phone {
-                width: 100%;
+        .nav-controls {
+            font-size: 0;
+            > div {
+                background-color: black;
+                color: white;
+                cursor: pointer;
+                display: inline-block;
+                font-size: 16px;
+                padding: 20px;
+                transition: all 0.3s;
+                &:hover {
+                    background-color: #424242;
+                }
             }
-        }
-        
-        img {
-            width: 100%;
         }
     }
 }

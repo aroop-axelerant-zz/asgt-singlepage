@@ -359,9 +359,9 @@ th {
 html, body {
   background-color: #000000;
   color: #ffffff;
-  font-family: 'Roboto', Helvetica, sans-serif;
+  font-family: 'Quicksand', Helvetica, sans-serif;
   font-size: 16px;
-  font-weight: 300;
+  font-weight: 400;
   margin: 0;
   padding: 0; }
 
@@ -390,7 +390,7 @@ h3 {
   font-size: 20px; }
 
 h4 {
-  font-family: 'Roboto', Helvetica, sans-serif;
+  font-family: 'Quicksand', Helvetica, sans-serif;
   color: #EC0000;
   margin: 0;
   margin-bottom: 20px;
@@ -444,7 +444,8 @@ a {
       @media only screen and (max-width: 479px) {
         .two-column-30-70 .column:first-child {
           width: 100%;
-          padding-right: 40px; } }
+          margin-bottom: 40px;
+          padding-right: 0; } }
     .two-column-30-70 .column:last-child {
       width: 70%; }
       @media only screen and (max-width: 479px) {
@@ -547,6 +548,9 @@ a {
       .page-header .ico-menu {
         display: block; } }
 
+.bg-black {
+  background: black !important; }
+
 .page-footer .three-column-cards .column {
   background-color: #ffffff;
   color: #000000;
@@ -608,22 +612,69 @@ a {
           font-size: 14px;
           font-weight: 500; }
 
-.meeting-rooms .room {
-  display: flex;
-  flex-direction: row-reverse; }
-  @media only screen and (max-width: 479px) {
-    .meeting-rooms .room {
-      display: block; } }
-  .meeting-rooms .room > div:first-child {
-    width: 40%; }
-    @media only screen and (max-width: 479px) {
-      .meeting-rooms .room > div:first-child {
-        width: 100%; } }
-  .meeting-rooms .room > div:last-child {
-    width: 60%;
-    padding-right: 40px; }
-    @media only screen and (max-width: 479px) {
-      .meeting-rooms .room > div:last-child {
-        width: 100%; } }
-  .meeting-rooms .room img {
-    width: 100%; }
+.meeting-rooms {
+  background: #ffffff;
+  color: #000000; }
+  .meeting-rooms .slides-wrapper {
+    width: 798px;
+    height: 360px;
+    overflow: hidden; }
+    .meeting-rooms .slides-wrapper .slides {
+      transform: translateX(0%);
+      transition: all 0.3s; }
+      .meeting-rooms .slides-wrapper .slides .slide {
+        display: block;
+        width: 798px;
+        height: 300px;
+        float: left; }
+        .meeting-rooms .slides-wrapper .slides .slide .slide-content {
+          display: flex;
+          flex-direction: row-reverse; }
+          .meeting-rooms .slides-wrapper .slides .slide .slide-content > div {
+            width: 50%; }
+          .meeting-rooms .slides-wrapper .slides .slide .slide-content .room-image {
+            position: relative; }
+            .meeting-rooms .slides-wrapper .slides .slide .slide-content .room-image img {
+              width: 100%;
+              object-fit: cover;
+              height: 100%; }
+            .meeting-rooms .slides-wrapper .slides .slide .slide-content .room-image .slide-counter {
+              background: linear-gradient(transparent 35%, White 35%);
+              color: grey;
+              font-size: 1.5em;
+              padding: 0 20px;
+              line-height: 0;
+              position: absolute;
+              bottom: 0;
+              right: 0; }
+              .meeting-rooms .slides-wrapper .slides .slide .slide-content .room-image .slide-counter .current-slide {
+                color: red;
+                font-size: 4em; }
+          .meeting-rooms .slides-wrapper .slides .slide .slide-content .room-info {
+            padding-right: 20px; }
+            .meeting-rooms .slides-wrapper .slides .slide .slide-content .room-info .room-details {
+              list-style: none;
+              padding: 0; }
+              .meeting-rooms .slides-wrapper .slides .slide .slide-content .room-info .room-details li {
+                display: inline-block;
+                vertical-align: top;
+                margin-right: 20px;
+                margin-bottom: 20px; }
+                .meeting-rooms .slides-wrapper .slides .slide .slide-content .room-info .room-details li > img, .meeting-rooms .slides-wrapper .slides .slide .slide-content .room-info .room-details li > span {
+                  display: inline-block;
+                  vertical-align: middle; }
+                .meeting-rooms .slides-wrapper .slides .slide .slide-content .room-info .room-details li img {
+                  opacity: 0.5;
+                  width: 20px; }
+    .meeting-rooms .slides-wrapper .nav-controls {
+      font-size: 0; }
+      .meeting-rooms .slides-wrapper .nav-controls > div {
+        background-color: black;
+        color: white;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 16px;
+        padding: 20px;
+        transition: all 0.3s; }
+        .meeting-rooms .slides-wrapper .nav-controls > div:hover {
+          background-color: #424242; }
