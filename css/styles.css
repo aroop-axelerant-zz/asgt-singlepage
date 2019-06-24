@@ -431,25 +431,25 @@ a {
     .two-column .column p {
       line-height: 2em; }
 
-.two-column-30-70 {
+.two-column-smaller-first-column {
   display: flex; }
   @media only screen and (max-width: 479px) {
-    .two-column-30-70 {
+    .two-column-smaller-first-column {
       display: block; } }
-  .two-column-30-70 .column {
+  .two-column-smaller-first-column .column {
     box-sizing: border-box; }
-    .two-column-30-70 .column:first-child {
-      width: 30%;
+    .two-column-smaller-first-column .column:first-child {
+      width: 40%;
       padding-right: 120px; }
       @media only screen and (max-width: 479px) {
-        .two-column-30-70 .column:first-child {
+        .two-column-smaller-first-column .column:first-child {
           width: 100%;
           margin-bottom: 40px;
           padding-right: 0; } }
-    .two-column-30-70 .column:last-child {
+    .two-column-smaller-first-column .column:last-child {
       width: 70%; }
       @media only screen and (max-width: 479px) {
-        .two-column-30-70 .column:last-child {
+        .two-column-smaller-first-column .column:last-child {
           width: 100%; } }
 
 .primary-cta {
@@ -678,3 +678,7 @@ a {
         transition: all 0.3s; }
         .meeting-rooms .slides-wrapper .nav-controls > div:hover {
           background-color: #424242; }
+
+.events-wrapper {
+  background: #E5E5E5;
+  color: #000000; }

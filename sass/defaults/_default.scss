@@ -85,7 +85,7 @@ a { font-weight: 400; }
     }
 }
 
-.two-column-30-70 {
+.two-column-smaller-first-column {
     display: flex;
     @include phone {
         display: block;
@@ -93,7 +93,7 @@ a { font-weight: 400; }
     .column {
         box-sizing: border-box;
         &:first-child {
-            width: 30%;
+            width: 40%;
             padding-right: 120px;
             @include phone {
                 width: 100%;
