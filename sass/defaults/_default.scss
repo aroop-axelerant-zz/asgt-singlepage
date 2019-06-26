@@ -95,6 +95,9 @@ a { font-weight: 400; }
         &:first-child {
             width: 40%;
             padding-right: 120px;
+            @include less-than-tablet {
+                padding-right: 40px;
+            }
             @include phone {
                 width: 100%;
                 margin-bottom: 40px;
