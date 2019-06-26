@@ -27,8 +27,22 @@
                 </div>
             </section>
             <section class="ico-menu"></section>
-        </header>
+        </header><!-- End of PAGE HEADER -->
         <section class="page-body">
+            <div class="hero-wrapper">
+                <div class="two-column-bigger-first-column">
+                    <div class="column">
+                        <div class="hero-content">
+                            <h1>Co-working | Coffee | Banking</h1>
+                            <p>Santander brings you a new collaborative work space, bookable rooms and highstreet bank, all in one</p>
+                            <div class="primary-cta">
+                                <a href="">Book a room</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column"></div>
+                </div>
+            </div>
             <div class="about-workcafe">
                 <div class="two-column">
                     <div class="column">
@@ -72,9 +86,9 @@
                             <p>Morbi sit amet porttitor mauris. Pellentesque quis viverra metus, 
                                 eu aliquam metus. Cras enim nisl, ornare in consectetur quis, 
                                 egestas at urna.</p>
-                                <div class="primary-cta">
-                                    <a href="">Book a room</a>
-                                </div>
+                            <div class="primary-cta">
+                                <a href="">Book a room</a>
+                            </div>
                         </div>
                         <div class="column">
                             <div class="slides-wrapper">
@@ -265,7 +279,7 @@
                 </div>
             </div><!-- End of EVENTS -->
             <div class="background-map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3023.6752502007657!2d-73.992009!3d40.725165!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259851c1e9037%3A0x74407071825a96a4!2sCBGB!5e0!3m2!1sen!2sus!4v1395419817211"></iframe>
+                <div id="map"></div>
             </div>
         </section>
         <footer class="page-footer">
@@ -297,8 +311,14 @@
                 </div>
             </div>
         </footer>
+        <section class="modal-wrapper">
+            <div class="modal event-modal"></div>
+            <div class="modal book-room-modal"></div>
+            <div class="modal messages-modal"></div>
+        </section>
     </section>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="./js/compiled/main-min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlsj4eb47KC99aeayN6fDyK-B97-5UzpU&callback=initMap" async defer></script>
 </body>
 </html>

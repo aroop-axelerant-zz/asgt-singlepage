@@ -33,7 +33,7 @@
                 }
                 .event-cards{
                     display: flex;
-                    width: $slider-width;
+                    width: 100%;
                     @include less-than-tablet {
                         width: auto;
                     }
