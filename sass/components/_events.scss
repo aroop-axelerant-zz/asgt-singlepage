@@ -1,0 +1,105 @@
+.events-wrapper {
+    background: $bg-grey;
+    color: $text-black;
+    .container {
+        .two-column-smaller-first-column{
+            .column {
+                .tabs ul{
+                    margin-top: 0;
+                    margin-bottom: 30px;
+                    padding: 0;
+                    list-style: none;
+                    li {
+                        cursor: pointer;
+                        color: $text-grey;
+                        display: inline-block;
+                        font-weight: 700;
+                        margin-right: 20px;
+                        transition: all 0.3s;
+                        &:hover {
+                            color: lighten($text-black, 60%);
+                        }
+                        &.tab-current {
+                            color: $text-black;
+                        }
+                    }
+                }
+                .tab-content {
+                    display: none;
+                    transition: all 0.3s;
+                    &.tab-current {
+                        display: inherit;
+                    }
+                }
+                .event-cards{
+                    display: flex;
+                    width: $slider-width;
+                    @include less-than-tablet {
+                        width: auto;
+                    }
+                    @include phone {
+                        flex-wrap: wrap;
+                        width: auto;
+                    }
+                    .event-card {
+                        color: $text-black;
+                        width: 50%;
+                        margin-right: 10px;
+                        text-decoration: none;
+                        transition: all 0.3s;
+                        &:last-child {
+                            margin-right: 0;
+                            margin-left: 10px;
+                            @include phone {
+                                margin: 0;
+                                margin-bottom: 20px;
+                            }
+                        }
+                        @include phone {
+                            width: 100%;
+                            margin: 0;
+                            margin-bottom: 20px;
+                        }
+                        &:hover {
+                            transform: scale(0.9, 0.9);
+                            box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.10), 
+                                -1px -1px 5px 1px rgba(0,0,0,0.10);
+                        }
+                        .event-image {
+                            height: 190px;
+                            @include less-than-tablet {
+                                height: 120px;
+                            }
+                            img {
+                                @include image-cover;
+                            }
+                        }
+                        .event-info {
+                            display: flex;
+                            background: $text-white;
+                            -moz-box-sizing: border-box;
+                            padding: 15px;
+                            p {
+                                font-weight: 700;
+                                margin: 0;
+                            }
+                            .event-date {
+                                color: $brand-color;
+                                padding-right: 20px;
+                                small {
+                                    font-size: $smallFont;
+                                }
+                            }
+                            .event-details {
+                                small {
+                                    color: $text-grey;
+                                    font-size: $smallFont;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
