@@ -44,7 +44,6 @@ $('.slide').each(function (){
 
     var currentNumber = numberFormatter(index);
     $(this).children().find('.current-slide').text(currentNumber);
-    console.log(index);
 });
 
 function numberFormatter (e) {
