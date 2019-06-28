@@ -1,5 +1,6 @@
 // Colors
 $brand-color: #EC0000;
+$branch-color-lighten: lighten($brand-color, 53%);
 $text-black: #000000;
 $text-white: #ffffff;
 $text-grey: #757575;
@@ -15,3 +16,7 @@ $bigFont: $baseFontSize * 1.25;
 //Custom Variables
 $slider-width: 798px;
 $slider-height: 300px;
+
+
+//CSS Animations
+$default-transition: all 0.3s;

@@ -312,9 +312,126 @@
             </div>
         </footer>
         <section class="modal-wrapper">
-            <div class="modal event-modal"></div>
-            <div class="modal book-room-modal"></div>
-            <div class="modal messages-modal"></div>
+            <div class="modal events-modal">
+                <div class="two-column">
+                    <div class="column event-info">
+                        <div class="event-date">
+                            <p>24</p>
+                            <small>May</small>
+                        </div>
+                        <div class="event-details">
+                            <p>Digitizing the future of business in leads</p>
+                            <small>6pm - 7pm</small>
+                        </div> 
+                    </div>
+                    <div class="column">
+                        <a href="" class="primary-link">Close</a>
+                    </div>
+                </div>
+                <div class="two-column">
+                    <div class="column">
+                        <img src="./images/digitising-future.png" alt="digitising-future">
+                    </div>
+                    <div class="column">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget 
+                            volutpat lacus. Aliquam ex tortor, hendrerit id posuere sollicitudin, 
+                            rutrum eget libero. Duis volutpat lacus dolor, id bibendum arcu varius 
+                            eu. Vivamus consequat sodales egestas.</p> <br />
+                            <p> Nulla diam eros, sodales a dolor 
+                            eu, pulvinar dignissim metus. Donec quis felis arcu. Sed placerat 
+                            pulvinar urna quis rhoncus. Ut malesuada mollis diam a pretium. Nam non 
+                            ante sed magna molestie efficitur. Nullam in mattis velit. Nunc in 
+                            eleifend ex. Vivamus sodales ex massa, sit amet tincidunt quam finibus 
+                            vitae.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal book-room-modal">
+                <div class="form-header">
+                    <div class="cta-close">
+                        <a href="" class="primary-link">Close</a>
+                    </div>
+                    <div class="header-content">
+                        <h4>Book a Room</h4>
+                        <h3>We have 3 meeting rooms to choose from, all available from 15 minutes to 2 hours.</h3>
+                    </div>
+                </div>
+                <div class="form-body">
+                    <form action="#" id="book-room" method="post">
+                        <div class="three-column-cards select-rooms">
+                            <div class="column">
+                                <a href="">
+                                    <span class="room-number">Room 1</span>
+                                    <span class="room-capacity">30</span>
+                                    <span class="primary-link">Select</span>
+                                </a>
+                            </div>
+                            <div class="column">
+                                <a href="">
+                                    <span class="room-number">Room 2</span>
+                                    <span class="room-capacity">30</span>
+                                    <span class="primary-link">Select</span>
+                                </a>
+                            </div>
+                            <div class="column">
+                                <a href="">
+                                    <span class="room-number">Room 3</span>
+                                    <span class="room-capacity">30</span>
+                                    <span class="primary-link">Select</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="three-column-cards date-time">
+                            <div class="column">
+                                <label for="date">Date (Weekdays Only)</label>
+                                <input type="date" name="date" id="inp-date">
+                            </div>
+                            <div class="column">
+                                <label for="start">Start time</label>
+                                <input type="time" name="start" id="inp-start-time">
+                            </div>
+                            <div class="column">
+                                <label for="end">End time(2hrs max)</label>
+                                <input type="time" name="end" id="inp-end-time">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="fname">Firstname*</label>
+                            <input type="text" name="fname" id="inp-fname" required>
+                        </div>
+                        <div>
+                            <label for="lname">Lastname*</label>
+                            <input type="text" name="lname" id="inp-lname" required>
+                        </div>
+                        <div>
+                            <label for="compname">Company name(If applicable)</label>
+                            <input type="text" name="compname" id="inp-compname" required>
+                        </div>
+                        <div>
+                            <label for="email">Email address*</label>
+                            <input type="email" name="email" id="inp-email" required>
+                        </div>
+                        <div>
+                            <label for="phone">Phone number*</label>
+                            <input type="tel" name="phone" id="inp-phone" required>
+                        </div>
+                        <div>
+                            <p class="text-right"><small>* mandatory fields</small></p>
+                        </div>
+                        <div class="user-approval">
+                            <input type="checkbox" name="approval" id="inp-approval">
+                            <label for="approval">I confirm that i have read and agree to the <a href="" class="primary-link">terms and conditions</a></label>
+                        </div>
+                        <div class="primary-cta">
+                            <button type="submit">Submit request</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="form-footer">
+                    <p>Alternatively call us on <b>1234123456</b></p>
+                    <p><small>(Mon - Fri, 9am - 5pm)</small></p>
+                </div>
+            </div>
         </section>
     </section>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>

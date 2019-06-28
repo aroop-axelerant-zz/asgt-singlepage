@@ -50,6 +50,19 @@ p {
 }
 a { font-weight: 400; }
 
+// Text Alignments
+.text-right {
+    text-align: right;
+}
+
+// Primary Link
+.primary-link {
+    color: $brand-color;
+    font-weight: 500;
+    text-decoration: none;
+    transition: $default-transition;
+}
+
 // Grid Styles
 .three-column-cards{
     display: flex;
@@ -140,13 +153,14 @@ a { font-weight: 400; }
     width: fit-content;
     position: relative;
     overflow: hidden;
-    a {
+    a,button {
         color: $text-white;
         display: block;
         background-color: $brand-color;
+        border: none;
         border-radius: 25px;
         padding: 15px 25px;
-        transition: all 0.3s;
+        transition: $default-transition;
         text-decoration: none;
         width: fit-content;
         position: relative;
@@ -165,11 +179,35 @@ a { font-weight: 400; }
             height: 10px;
             position: absolute;
             transform: translateX(-100%) rotate(45deg);
-            transition: all 0.3s;
+            transition: $default-transition;
         }
     
         &:hover:before {
             transform: translateX(100%) rotate(45deg);
+        }
+    }
+}
+
+
+// Events Styling
+.event-info {
+    display: flex;
+    background: $text-white;
+    p {
+        font-weight: 700;
+        margin: 0;
+    }
+    .event-date {
+        color: $brand-color;
+        padding-right: 20px;
+        small {
+            font-size: $smallFont;
+        }
+    }
+    .event-details {
+        small {
+            color: $text-grey;
+            font-size: $smallFont;
         }
     }
 }
