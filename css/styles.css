@@ -408,6 +408,7 @@ a {
 
 .primary-link {
   color: #EC0000;
+  cursor: pointer;
   font-weight: 500;
   text-decoration: none;
   transition: all 0.3s; }
@@ -415,7 +416,7 @@ a {
 .three-column-cards {
   display: flex; }
   .three-column-cards .column {
-    margin-left: 2%;
+    margin-left: 2.4%;
     width: 31.6666666667%; }
     .three-column-cards .column:first-child {
       margin-left: 0; }
@@ -641,6 +642,21 @@ a {
     background-size: cover; }
   .hero-wrapper .two-column-bigger-first-column .column > div {
     align-self: center; }
+  .hero-wrapper .two-column-bigger-first-column .column.play-btn {
+    position: relative; }
+    @media only screen and (max-width: 479px) {
+      .hero-wrapper .two-column-bigger-first-column .column.play-btn {
+        min-height: 30vh; } }
+    .hero-wrapper .two-column-bigger-first-column .column.play-btn img {
+      cursor: pointer;
+      width: 64px;
+      position: absolute;
+      left: -32px;
+      top: calc(50% - 32px); }
+      @media only screen and (max-width: 479px) {
+        .hero-wrapper .two-column-bigger-first-column .column.play-btn img {
+          left: calc(50% - 32px);
+          top: -32px; } }
 
 .about-workcafe {
   background: #ffffff;
@@ -828,30 +844,34 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   min-height: 100vh;
   z-index: 9999;
-  display: none; }
+  display: none;
+  transition: all 0.3s; }
   .modal-wrapper .modal {
     background-color: #ffffff;
     color: #000000;
+    display: none;
     padding: 40px;
-    width: 720px; }
+    width: 720px;
+    transition: all 0.3s; }
     @media only screen and (max-width: 1199px) {
       .modal-wrapper .modal {
         width: 100%; } }
-    .modal-wrapper .modal.events-modal {
-      display: none; }
-      .modal-wrapper .modal.events-modal .two-column:first-child {
-        margin-bottom: 20px; }
-        @media only screen and (max-width: 479px) {
-          .modal-wrapper .modal.events-modal .two-column:first-child {
-            flex-direction: column-reverse; } }
-        .modal-wrapper .modal.events-modal .two-column:first-child .column:last-child {
-          text-align: right; }
+    .modal-wrapper .modal.events-modal .two-column:first-child {
+      margin-bottom: 20px; }
+      @media only screen and (max-width: 479px) {
+        .modal-wrapper .modal.events-modal .two-column:first-child {
+          flex-direction: column-reverse; } }
+      .modal-wrapper .modal.events-modal .two-column:first-child .column:last-child {
+        text-align: right; }
+    .modal-wrapper .modal.video-wrapper iframe {
+      width: 100%;
+      min-height: 400px; }
     .modal-wrapper .modal .two-column .column:first-child {
       padding-right: 20px; }
     .modal-wrapper .modal .two-column .column:last-child {
@@ -862,8 +882,14 @@ a {
     .modal-wrapper .modal img {
       width: 100%; }
   .modal-wrapper .book-room-modal {
-    display: none;
-    padding: 0; }
+    padding: 0;
+    max-height: 90vh;
+    overflow-y: scroll; }
+    @media only screen and (max-width: 479px) {
+      .modal-wrapper .book-room-modal {
+        max-height: 100vh; } }
+    .modal-wrapper .book-room-modal .form {
+      overflow-y: hidden; }
     .modal-wrapper .book-room-modal .form-header, .modal-wrapper .book-room-modal .form-body {
       padding: 40px 40px 0 40px; }
     .modal-wrapper .book-room-modal .form-header h3 {

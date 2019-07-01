@@ -3,23 +3,25 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     min-height: 100vh;
     z-index: 9999;
     display: none;
+    transition: $default-transition;
     .modal {
         background-color: $text-white;
         color: $text-black;
+        display: none;
         padding: 40px;
         width: 720px;
+        transition: $default-transition;
         @include less-than-tablet {
             width: 100%;
         }
         &.events-modal {
-            display: none;
             .two-column {
                 &:first-child {
                     margin-bottom: 20px;
@@ -30,6 +32,13 @@
                         text-align: right;
                     }
                 }
+            }
+        }
+        &.video-wrapper {
+            // display: block;
+            iframe {
+                width: 100%;
+                min-height: 400px;
             }
         }
         .two-column {
@@ -50,8 +59,15 @@
     }
 
     .book-room-modal {
-        display: none;
         padding: 0;
+        max-height: 90vh;
+        overflow-y: scroll;
+        @include phone {
+            max-height: 100vh;
+        }
+        .form {
+            overflow-y: hidden;
+        }
         .form-header, .form-body {
             padding: 40px 40px 0 40px;
         }

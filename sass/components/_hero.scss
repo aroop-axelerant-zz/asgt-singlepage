@@ -19,6 +19,24 @@
             > div {
                 align-self: center;
             }
+            &.play-btn {
+                position: relative;
+                @include phone {
+                    min-height: 30vh;
+                }
+                img {
+                    cursor: pointer;
+                    width: 64px;
+
+                    position: absolute;
+                    left: -32px;
+                    top: calc(50% - 32px);
+                    @include phone {
+                        left: calc(50% - 32px);
+                        top: -32px;
+                    }
+                }
+            }
         }
     }
 }

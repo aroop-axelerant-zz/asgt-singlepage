@@ -22,7 +22,7 @@
                         <li><a href="">Where to find us</a></li>
                     </ul>
                 </nav>
-                <div class="primary-cta">
+                <div class="primary-cta book-room-cta">
                     <a href="">Book a room</a>
                 </div>
             </section>
@@ -34,13 +34,15 @@
                     <div class="column">
                         <div class="hero-content">
                             <h1>Co-working | Coffee | Banking</h1>
-                            <p>Santander brings you a new collaborative work space, bookable rooms and highstreet bank, all in one</p>
-                            <div class="primary-cta">
+                            <p>Santander brings you a new collaborative work space, bookable rooms and highstreet bank, all in one</p> <br>
+                            <div class="primary-cta book-room-cta">
                                 <a href="">Book a room</a>
                             </div>
                         </div>
                     </div>
-                    <div class="column"></div>
+                    <div class="column play-btn">
+                        <img src="./images/play.svg" alt="">
+                    </div>
                 </div>
             </div>
             <div class="about-workcafe">
@@ -86,7 +88,7 @@
                             <p>Morbi sit amet porttitor mauris. Pellentesque quis viverra metus, 
                                 eu aliquam metus. Cras enim nisl, ornare in consectetur quis, 
                                 egestas at urna.</p>
-                            <div class="primary-cta">
+                            <div class="primary-cta book-room-cta">
                                 <a href="">Book a room</a>
                             </div>
                         </div>
@@ -325,7 +327,9 @@
                         </div> 
                     </div>
                     <div class="column">
-                        <a href="" class="primary-link">Close</a>
+                        <div class="cta-close">
+                            <a class="primary-link">Close</a>
+                        </div>
                     </div>
                 </div>
                 <div class="two-column">
@@ -347,90 +351,95 @@
                 </div>
             </div>
             <div class="modal book-room-modal">
-                <div class="form-header">
-                    <div class="cta-close">
-                        <a href="" class="primary-link">Close</a>
+                <div class="form">
+                    <div class="form-header">
+                        <div class="cta-close">
+                            <a class="primary-link">Close</a>
+                        </div>
+                        <div class="header-content">
+                            <h4>Book a Room</h4>
+                            <h3>We have 3 meeting rooms to choose from, all available from 15 minutes to 2 hours.</h3>
+                        </div>
                     </div>
-                    <div class="header-content">
-                        <h4>Book a Room</h4>
-                        <h3>We have 3 meeting rooms to choose from, all available from 15 minutes to 2 hours.</h3>
+                    <div class="form-body">
+                        <form action="#" id="book-room" method="post">
+                            <div class="three-column-cards select-rooms">
+                                <div class="column">
+                                    <a href="">
+                                        <span class="room-number">Room 1</span>
+                                        <span class="room-capacity">30</span>
+                                        <span class="primary-link">Select</span>
+                                    </a>
+                                </div>
+                                <div class="column">
+                                    <a href="">
+                                        <span class="room-number">Room 2</span>
+                                        <span class="room-capacity">30</span>
+                                        <span class="primary-link">Select</span>
+                                    </a>
+                                </div>
+                                <div class="column">
+                                    <a href="">
+                                        <span class="room-number">Room 3</span>
+                                        <span class="room-capacity">30</span>
+                                        <span class="primary-link">Select</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="three-column-cards date-time">
+                                <div class="column">
+                                    <label for="date">Date (Weekdays Only)</label>
+                                    <input type="date" name="date" id="inp-date">
+                                </div>
+                                <div class="column">
+                                    <label for="start">Start time</label>
+                                    <input type="time" name="start" id="inp-start-time">
+                                </div>
+                                <div class="column">
+                                    <label for="end">End time(2hrs max)</label>
+                                    <input type="time" name="end" id="inp-end-time">
+                                </div>
+                            </div>
+                            <div>
+                                <label for="fname">Firstname*</label>
+                                <input type="text" name="fname" id="inp-fname" required>
+                            </div>
+                            <div>
+                                <label for="lname">Lastname*</label>
+                                <input type="text" name="lname" id="inp-lname" required>
+                            </div>
+                            <div>
+                                <label for="compname">Company name(If applicable)</label>
+                                <input type="text" name="compname" id="inp-compname" required>
+                            </div>
+                            <div>
+                                <label for="email">Email address*</label>
+                                <input type="email" name="email" id="inp-email" required>
+                            </div>
+                            <div>
+                                <label for="phone">Phone number*</label>
+                                <input type="tel" name="phone" id="inp-phone" required>
+                            </div>
+                            <div>
+                                <p class="text-right"><small>* mandatory fields</small></p>
+                            </div>
+                            <div class="user-approval">
+                                <input type="checkbox" name="approval" id="inp-approval">
+                                <label for="approval">I confirm that i have read and agree to the <a href="" class="primary-link">terms and conditions</a></label>
+                            </div>
+                            <div class="primary-cta">
+                                <button type="submit">Submit request</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="form-footer">
+                        <p>Alternatively call us on <b>1234123456</b></p>
+                        <p><small>(Mon - Fri, 9am - 5pm)</small></p>
                     </div>
                 </div>
-                <div class="form-body">
-                    <form action="#" id="book-room" method="post">
-                        <div class="three-column-cards select-rooms">
-                            <div class="column">
-                                <a href="">
-                                    <span class="room-number">Room 1</span>
-                                    <span class="room-capacity">30</span>
-                                    <span class="primary-link">Select</span>
-                                </a>
-                            </div>
-                            <div class="column">
-                                <a href="">
-                                    <span class="room-number">Room 2</span>
-                                    <span class="room-capacity">30</span>
-                                    <span class="primary-link">Select</span>
-                                </a>
-                            </div>
-                            <div class="column">
-                                <a href="">
-                                    <span class="room-number">Room 3</span>
-                                    <span class="room-capacity">30</span>
-                                    <span class="primary-link">Select</span>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="three-column-cards date-time">
-                            <div class="column">
-                                <label for="date">Date (Weekdays Only)</label>
-                                <input type="date" name="date" id="inp-date">
-                            </div>
-                            <div class="column">
-                                <label for="start">Start time</label>
-                                <input type="time" name="start" id="inp-start-time">
-                            </div>
-                            <div class="column">
-                                <label for="end">End time(2hrs max)</label>
-                                <input type="time" name="end" id="inp-end-time">
-                            </div>
-                        </div>
-                        <div>
-                            <label for="fname">Firstname*</label>
-                            <input type="text" name="fname" id="inp-fname" required>
-                        </div>
-                        <div>
-                            <label for="lname">Lastname*</label>
-                            <input type="text" name="lname" id="inp-lname" required>
-                        </div>
-                        <div>
-                            <label for="compname">Company name(If applicable)</label>
-                            <input type="text" name="compname" id="inp-compname" required>
-                        </div>
-                        <div>
-                            <label for="email">Email address*</label>
-                            <input type="email" name="email" id="inp-email" required>
-                        </div>
-                        <div>
-                            <label for="phone">Phone number*</label>
-                            <input type="tel" name="phone" id="inp-phone" required>
-                        </div>
-                        <div>
-                            <p class="text-right"><small>* mandatory fields</small></p>
-                        </div>
-                        <div class="user-approval">
-                            <input type="checkbox" name="approval" id="inp-approval">
-                            <label for="approval">I confirm that i have read and agree to the <a href="" class="primary-link">terms and conditions</a></label>
-                        </div>
-                        <div class="primary-cta">
-                            <button type="submit">Submit request</button>
-                        </div>
-                    </form>
-                </div>
-                <div class="form-footer">
-                    <p>Alternatively call us on <b>1234123456</b></p>
-                    <p><small>(Mon - Fri, 9am - 5pm)</small></p>
-                </div>
+            </div>
+            <div class="modal video-wrapper">
+                <iframe src="https://www.youtube.com/embed/ktCgVopf7D0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </section>
     </section>
