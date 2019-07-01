@@ -1,12 +1,159 @@
 .modal-wrapper {
     background: rgba(0, 0, 0, 0.75);
-    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     min-height: 100vh;
     z-index: 9999;
+    display: none;
+    transition: $default-transition;
     .modal {
-        align-self: center;
+        background-color: $text-white;
+        color: $text-black;
+        display: none;
+        padding: 40px;
+        width: 720px;
+        transition: $default-transition;
+        @include less-than-tablet {
+            width: 100%;
+        }
+        &.events-modal {
+            .two-column {
+                &:first-child {
+                    margin-bottom: 20px;
+                    @include phone {
+                        flex-direction: column-reverse;
+                    }
+                    .column:last-child {
+                        text-align: right;
+                    }
+                }
+            }
+        }
+        &.video-wrapper {
+            // display: block;
+            iframe {
+                width: 100%;
+                min-height: 400px;
+            }
+        }
+        .two-column {
+            .column:first-child {
+                padding-right: 20px;
+            }
+            .column:last-child {
+                padding-left: 20px;
+            }
+        }
+        p { 
+            margin: 0; 
+            line-height: 1.5em;
+        }
+        img {
+            width: 100%;
+        }
+    }
+
+    .book-room-modal {
+        padding: 0;
+        max-height: 90vh;
+        overflow-y: scroll;
+        @include phone {
+            max-height: 100vh;
+        }
+        .form {
+            overflow-y: hidden;
+        }
+        .form-header, .form-body {
+            padding: 40px 40px 0 40px;
+        }
+        .form-header {
+            h3 { margin: 0; }
+            .cta-close {
+                text-align: right;
+            }
+        }
+        .form-body {
+            .primary-cta {
+                width: 100%;
+                a {
+                    margin: 0 auto;
+                }
+            }
+        }
+        .form-footer {
+            background: $bg-grey;
+            padding: 40px;
+            text-align: center;
+            small {
+                font-weight: 500;
+            }
+        }
+        #book-room {
+            > div {
+                margin-bottom: 20px;
+                label {
+                    color: $text-grey;
+                    display: block;
+                    font-size: $smallFont - 2;
+                    margin-bottom: 5px;
+                }
+                input[type="date"], input[type="time"], input[type="text"], input[type="email"], input[type="tel"] {
+                    border: 1px solid $text-grey;
+                    box-sizing: border-box;
+                    display: block;
+                    font-size: $smallFont;
+                    padding: 10px;
+                    width: 100%;
+                    transition: $default-transition;
+                    &:hover {
+                        background: $branch-color-lighten;
+                        border-color: $brand-color;
+                    }
+                }
+            }
+            .select-rooms {
+                .column {
+                    a {
+                        border: 1px solid $text-grey;
+                        color: $text-black;
+                        display: block;
+                        padding: 20px;
+                        text-decoration: none;
+                        transition: $default-transition;
+                        &:hover {
+                            background: $branch-color-lighten;
+                            border-color: $brand-color;
+                        }
+                        span {
+                            display: block;
+                            font-weight: 500;
+                            &.room-number {
+                                font-size: $baseFontSize;
+                                margin-bottom: 10px;
+                            }
+                            &.room-capacity {
+                                font-size: $smallFont;
+                                margin-bottom: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+            .user-approval {
+                input[type="checkbox"], label {
+                    display: inline;
+                    width: auto;
+                }
+            }
+        }
+    }
+
+    .messages-modal {
+        display: none;
     }
 }

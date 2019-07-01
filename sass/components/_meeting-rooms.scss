@@ -7,7 +7,7 @@
         overflow: hidden;
         .slides {
           transform: translateX(0%);
-          transition: all 0.3s;
+          transition: $default-transition;
           .slide {
             display: block;
             width: $slider-width;
@@ -72,7 +72,7 @@
                 display: inline-block;
                 font-size: 16px;
                 padding: 20px;
-                transition: all 0.3s;
+                transition: $default-transition;
                 &:hover {
                     background-color: #424242;
                 }

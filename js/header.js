@@ -6,7 +6,7 @@ $(window).scroll(function (){
         $('.page-header').css('background', 'black');
         if ($(window).width() >= 1200) {
             $('.navigation').css('transform', 'translateX(0)');
-            $('.primary-cta').css('display', 'block');
+            $('.page-header .primary-cta').css('display', 'block');
         }
     } else {
         $('.page-header').css('background', 'none');

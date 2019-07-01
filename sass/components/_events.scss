@@ -15,7 +15,7 @@
                         display: inline-block;
                         font-weight: 700;
                         margin-right: 20px;
-                        transition: all 0.3s;
+                        transition: $default-transition;
                         &:hover {
                             color: lighten($text-black, 60%);
                         }
@@ -26,7 +26,7 @@
                 }
                 .tab-content {
                     display: none;
-                    transition: all 0.3s;
+                    transition: $default-transition;
                     &.tab-current {
                         display: inherit;
                     }
@@ -42,11 +42,12 @@
                         width: auto;
                     }
                     .event-card {
+                        background: $text-white;
                         color: $text-black;
                         width: 50%;
                         margin-right: 10px;
                         text-decoration: none;
-                        transition: all 0.3s;
+                        transition: $default-transition;
                         &:last-child {
                             margin-right: 0;
                             margin-left: 10px;
@@ -61,9 +62,7 @@
                             margin-bottom: 20px;
                         }
                         &:hover {
-                            transform: scale(0.9, 0.9);
-                            box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.10), 
-                                -1px -1px 5px 1px rgba(0,0,0,0.10);
+                            transform: scale(1.05, 1.05);
                         }
                         .event-image {
                             height: 190px;
@@ -75,27 +74,9 @@
                             }
                         }
                         .event-info {
-                            display: flex;
-                            background: $text-white;
                             -moz-box-sizing: border-box;
+                            box-sizing: border-box;
                             padding: 15px;
-                            p {
-                                font-weight: 700;
-                                margin: 0;
-                            }
-                            .event-date {
-                                color: $brand-color;
-                                padding-right: 20px;
-                                small {
-                                    font-size: $smallFont;
-                                }
-                            }
-                            .event-details {
-                                small {
-                                    color: $text-grey;
-                                    font-size: $smallFont;
-                                }
-                            }
                         }
                     }
                 }
